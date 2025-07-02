@@ -20,7 +20,6 @@ const Header = () => {
       </div>
       <nav className="nav-links">
         <Link to="/login">Giriş Yap</Link>
-        <Link to="/register">Kayıt Ol</Link>
         <Link to="/admin">Admin Paneli</Link>
         <Link to="/chat">Chat</Link>
 
