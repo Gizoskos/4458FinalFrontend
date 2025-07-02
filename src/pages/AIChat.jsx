@@ -12,7 +12,7 @@ const AIChat = () => {
     setAiResponse('');
 
     try {
-      const res = await axios.post('http://localhost:8080/api/v1/ai/message', userMessage, {
+      const res = await axios.post('https://four458apigateway.onrender.com/api/v1/ai/message', userMessage, {
         headers: {
           'Content-Type': 'application/json',
         },

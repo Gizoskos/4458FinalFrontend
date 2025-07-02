@@ -11,7 +11,7 @@ const JobDetail = () => {
   useEffect(() => {
     const fetchJobDetail = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/v1/job-posting/${id}`);
+        const res = await axios.get(`https://four458apigateway.onrender.com/api/v1/job-posting/${id}`);
         setJob(res.data);
         fetchRelatedJobs(res.data.department);
       } catch (err) {
@@ -21,7 +21,7 @@ const JobDetail = () => {
 
     const fetchRelatedJobs = async (department) => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/v1/job-posting/related`, {
+        const res = await axios.get(`https://four458apigateway.onrender.com/api/v1/job-posting/related`, {
           params: { department },
         });
         setRelatedJobs(res.data);
@@ -35,7 +35,7 @@ const JobDetail = () => {
 
   const handleApply = async () => {
     try {
-      await axios.post(`http://localhost:8080/api/v1/job-posting/apply/${id}`, null, {
+      await axios.post(`https://four458apigateway.onrender.com/api/v1/job-posting/apply/${id}`, null, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       alert('Successfully applied!');

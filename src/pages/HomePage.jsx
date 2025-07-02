@@ -30,7 +30,7 @@ const HomePage = () => {
 
   // Arama geçmişini backend'den getirir
   useEffect(() => {
-    axios.get('http://localhost:8080/api/v1/jobs/history', {
+    axios.get('https://four458apigateway.onrender.com/api/v1/jobs/history', {
       params: { userId: 'test-user' },
     })
     .then((res) => {

@@ -18,7 +18,7 @@ const AdminPanel = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/api/v1/admin/jobs', form, {
+      const res = await axios.post('https://four458apigateway.onrender.com/api/v1/admin/jobs', form, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

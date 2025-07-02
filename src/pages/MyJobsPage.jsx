@@ -7,7 +7,7 @@ const MyJobsPage = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/v1/jobs/history', {
+        const res = await axios.get('https://four458apigateway.onrender.com/api/v1/jobs/history', {
           params: { userId: 'test-user' }, // gerçek user ID ile değiştirilebilir
         });
         setHistory(res.data);

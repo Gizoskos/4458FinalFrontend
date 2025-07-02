@@ -58,7 +58,7 @@ const SearchResultsPage = () => {
 
   const fetchJobs = async (city, title, workingType, country) => {
     try {
-      const res = await axios.get('http://localhost:8080/api/v1/jobs/search', {
+      const res = await axios.get('https://four458apigateway.onrender.com/api/v1/jobs/search', {
         params: {
           city,
           title,
